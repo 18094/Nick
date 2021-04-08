@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"; href="Bunnings%20Noodle%20House.css">
+    </head>
+<body>
+    <header>
+        <h1>Bunnings Noodle House</h1>
+        <h4>The best noodle warehouse</h4>
+    </header>
+  <section>
+    <h2>WELCOME:</h2>
+            <p> VISION: To be the best noodle warehouse with the best prices</p>
+    </section>
+    <br>
+    
+    <section class = "blue container">
+    <p>ABOUT US: Founded in 2021 by entreprneur Nick Miller, aiming to be the best noodle franchise in New Zealand
+        <br>
+        <br>
+          <img src="Images/jafabfa.png" width="720px" height="300px">
+        </p> 
+     <article class="card">
+    <img src="Images/0_uggUMT1WxSFk7SNc.jpg" width="150px"; height="150px">
+    <h3>Snowman Mascot</h3>
+    <p>Bunnings Noodle House snowman, but here is a link to a different noodle house because why not</p>
+         <a href ="https://edennoodles.business.site/"><button>Click</button></a>
+    </article>
+    <article class="card">
+    <img src="Images/maxresdefault.jpg" width="150px"; height="150px">
+    <h3>Nick</h3>
+    <p>CEO of Bunnings Noodle House</p>
+    <a href ="https://en.wikipedia.org/wiki/Nick_Jonas"><button> Contact</button></a>
+    </article>
+    </section>
+    <section class="blue container">
+        <div class="form">
+         <h2>Order Your Noodles - Form</h2>
+        <form id="my-form">
+        <table>
+              <form>
+               <h3>Order Here:</h3>
+            </form>
+            <form
+                  id="my-form"
+                  action="me.html"
+                  target="_blank"
+                  ></form>
+        <tr>
+            <td> Name: </td>
+            <td><input type="text" size="25px"
+                       name="my-name"></td>
+            </tr>
+            <tr>
+            <td> Address: </td>
+            <td><input type="text" size="25px"
+                       name="my-address"></td>
+            </tr>
+          <tr>
+             <td> Favourite noodle flavour: </td>
+            <td><select name="my-favourtie-drink">
+                <option>Chicken</option>
+                <option>Beef</option>
+                <option>Curry</option>
+                <option>Other</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Quantity of noodle packs</td>
+                <td><input type="number" name="my-qty"
+                           value="1" min="1" max="5">
+                <small>(max 5)</small>
+                </td>
+            </tr>
+            <tr>
+                <br>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <input class="button"
+                       type="button"
+                       value="Process Order"
+                       onclick="placeOrder();">
+                <input class="button"
+                       type="reset" 
+                       value="Clear">
+                </td>
+            </tr>
+        </table>
+            <div id="my-order"></div>
+        </form>
+        </div>
+        <div class="nooodle"><img src="Images/ggg.png" width="360px" height="360px";></div>
+        <div class="bowl"><img src="Images/06f3f697bd08fb955ff8981705d0308a.webp"; width="460px"; height="300px"></div>
+    </section>
+    <section class="orange container">
+        <p>Address: 105 Dominion Road Mt Eden
+        <br>
+        <br>
+        Thanks For Checking Out Bunnings Noodle House
+        <br>
+        <br>
+            Come Again
+        </p>
+    </section>
+    <div class="footer"></div>
+<script>
+    function placeOrder (){
+        var orderForm = document.getElementById("my-form");
+        results = "<h3>Success!</h3> Here is your order.";
+        results += "<br>Name: " + orderForm.elements["my-name"].value;
+        results += "<br>Address: " + orderForm.elements["my-address"].value;
+        results += "<br>Ordered: " + orderForm.elements["my-favourtie-drink"].value;
+          results += "<br>Quantity: " + orderForm.elements["my-qty"].value;
+        var orderResults = document.getElementById("my-order");
+        orderResults.style.display = "block";
+        orderResults.innerHTML = results;
+    }
+    </script>
+     </body>
+
+</html>
